@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory android:title="@string/rezept">
+        <ListPreference
+            android:defaultValue="400"
+            android:title="@string/einst_bildgroesse"
+            android:key="img_size"
+            android:summary="@string/einst_bildgroesse_txt"
+            android:entryValues="@array/image_resolution_values"
+            android:entries="@array/image_resolution_names" />
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="@string/rezeptliste">
+
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:title="@string/einst_alle_rezepte"
+            android:key="e_alle_rezepte"
+            android:singleLine="false"
+            android:summary="@string/einst_alle_rezepte_txt" />
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="@string/einkaufsliste">
+
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:title="@string/einst_zutaten_unten"
+            android:key="e_ok_unten"
+            android:summary="@string/einst_zutaten_unten_txt" />
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="@string/einst_internet">
+
+        <EditTextPreference
+            android:defaultValue="14"
+            android:selectAllOnFocus="true"
+            android:singleLine="true"
+            android:title="@string/einst_tage_rezept_neu"
+            android:key="e_tage"
+            android:elevation="1dp"
+            android:summary="@string/einst_tage_rezept_neu_txt"
+            android:maxLength="3"
+            android:inputType="number" />
+        <EditTextPreference
+            android:defaultValue="@string/_serverAdresse"
+            android:selectAllOnFocus="true"
+            android:title="@string/einst_serveradresse"
+            android:key="e_server"
+            android:summary="@string/einst_serveradresse_txt"
+            android:singleLine="true"
+            android:inputType="text" />
+        <EditTextPreference
+            android:selectAllOnFocus="true"
+            android:singleLine="true"
+            android:title="@string/einst_benutzer"
+            android:key="e_benutzer"
+            android:summary="@string/einst_benutzer_txt"
+            android:defaultValue="anonymous" />
+        <EditTextPreference
+            android:selectAllOnFocus="true"
+            android:singleLine="true"
+            android:title="@string/einst_eMail"
+            android:key="e_eMail"
+            android:summary="@string/einst_benutzer_txt" />
+        <EditTextPreference
+            android:selectAllOnFocus="true"
+            android:password="true"
+            android:singleLine="true"
+            android:title="@string/einst_passwort"
+            android:key="e_passwort"
+            android:summary="@string/einst_benutzer_txt" />
+    </PreferenceCategory>
+</PreferenceScreen>

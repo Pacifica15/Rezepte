@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="none">
+        <item
+            android:id="@+id/nav_rezepte"
+            android:icon="@drawable/ic_svg_topf"
+            android:title="@string/m_rezepte_anzeigen" />
+        <item
+            android:id="@+id/nav_ekliste"
+            android:icon="@drawable/ic_einkaufstasche"
+            android:title="@string/m_einkaufsliste" />
+    </group>
+    <item android:title="@string/m_datentransfer">
+        <menu>
+            <item
+                android:id="@+id/nav_db_export"
+                android:icon="@android:drawable/ic_menu_save"
+                android:title="@string/m_db_export" />
+            <item android:title="@string/m_db_import"
+                android:id="@+id/nav_db_import"
+                android:icon="@android:drawable/ic_menu_send" />
+        </menu>
+    </item>
+
+    <item android:title="@string/m_stammdaten">
+        <menu >
+            <item android:title="@string/kategorien"
+                android:icon="@drawable/ic_svg_kategorien"
+                android:id="@+id/nav_kategorien" />
+            <item android:title="@string/zutaten"
+                android:icon="@drawable/ic_svg_zutaten_menu"
+                android:id="@+id/nav_zutaten" />
+            <item android:title="@string/einheiten"
+                android:icon="@drawable/ic_svg_einheiten"
+                android:id="@+id/nav_einheiten" />
+            <item android:title="@string/faktoren"
+                android:id="@+id/nav_faktoren"
+                android:icon="@drawable/ic_svg_einheiten_umrechnen" />
+        </menu>
+    </item>
+    <item android:title="@string/m_einstellungen">
+        <menu>
+            <item android:title="@string/m_anmelden"
+                android:id="@+id/nav_registrieren"
+                android:icon="@android:drawable/ic_menu_view" />
+            <item
+                android:id="@+id/nav_einstellung"
+                android:icon="@drawable/ic_menu_manage"
+                android:title="@string/action_settings" />
+        </menu>
+    </item>
+</menu>

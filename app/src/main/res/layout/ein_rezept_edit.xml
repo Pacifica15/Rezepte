@@ -1,0 +1,451 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context="de.steffen.rezepte.EinRezeptEdit">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay"
+        android:background="?attr/colorPrimaryDark">
+    </android.support.design.widget.AppBarLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+        android:id="@+id/ll_ein_rezept_edit">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay"
+            app:titleTextColor="@android:color/white" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimaryLight">
+
+            <ImageView
+                android:paddingLeft="10dp"
+                android:id="@+id/RezeptBild"
+                android:maxHeight="100dp"
+                android:minHeight="100dp"
+                android:maxWidth="100dp"
+                android:minWidth="100dp"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@mipmap/_unbekannt"
+                android:adjustViewBounds="true"
+                android:clickable="true">
+            </ImageView>
+
+            <EditText
+                android:paddingLeft="10dp"
+                android:id="@+id/RezeptName"
+                android:layout_width="match_parent"
+                android:textSize="@dimen/text_large"
+                android:maxHeight="100dp"
+                android:minHeight="100dp"
+                android:layout_height="100dp"
+                android:soundEffectsEnabled="true"
+                android:hint="Rezeptname"
+                android:gravity="center"
+                android:maxLength="30"
+                android:inputType="text"
+                android:maxLines="2"
+                android:elevation="0dp">
+
+            </EditText>
+
+        </LinearLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/rezept_scroll"
+            android:focusable="false">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/colorPrimary"
+                    android:layout_weight="0">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:background="@color/colorPrimary"
+                        android:paddingLeft="5dp"
+                        android:text="@string/kategorie"
+                        android:textColor="#fff"
+                        android:visibility="visible"
+                        android:textSize="@dimen/text_medium"
+                        android:gravity="center_vertical" />
+
+                    <Spinner
+                        android:id="@+id/kategorie"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:visibility="visible"
+                        android:textSize="@dimen/text_medium"
+                        android:elevation="0dp"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginLeft="10dp"
+                        android:background="@color/colorPrimary"
+                        android:popupBackground="@color/colorPrimary" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/colorPrimary"
+                    android:layout_weight="0">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@color/colorPrimary"
+                        android:paddingLeft="5dp"
+                        android:text="@string/anzahl_portionen"
+                        android:textColor="#fff"
+                        android:visibility="visible"
+                        android:textSize="@dimen/text_medium"
+                        />
+
+                    <EditText
+                        android:id="@+id/portionen"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="4"
+                        android:textColor="#fff"
+                        android:visibility="visible"
+                        android:layout_weight="0"
+                        android:textSize="@dimen/text_medium"
+                        android:paddingLeft="10dp"
+                        android:inputType="number"
+                        android:maxLength="2"
+                        android:minWidth="50dp"
+                        android:maxWidth="50dp" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/empty_line"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorPrimaryLight"
+                    android:paddingLeft="5dp"
+                    android:text=""
+                    android:textColor="#fff"
+                    android:visibility="visible"
+                    android:layout_weight="0"
+                    android:height="2dp"
+                    android:maxHeight="2dp"
+                    android:minHeight="2dp" />
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:id="@+id/schritt1">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:background="@color/colorPrimary"
+                        android:paddingLeft="5dp"
+                        android:text="@string/zutaten_fuer"
+                        android:textColor="#fff"
+                        android:visibility="visible"
+                        android:gravity="center_vertical"
+                        android:textSize="@dimen/text_medium"
+                        android:id="@+id/zutatenfuer1" />
+
+                    <EditText
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:ems="10"
+                        android:id="@+id/ueberschriftzutaten1"
+                        android:layout_weight="1"
+                        android:background="@color/colorPrimary"
+                        android:paddingLeft="10dp"
+                        android:textColor="#fff"
+                        android:textSize="@dimen/text_medium"
+                        android:maxLength="30"
+                        android:inputType="text" />
+
+                    <ImageButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:srcCompat="@android:drawable/ic_input_add"
+                        android:id="@+id/add_1"
+                        android:layout_weight="0"
+                        android:background="@color/colorPrimary"
+                        android:focusable="false" />
+
+                </LinearLayout>
+
+                <ListView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/zutaten"
+                    android:layout_weight="0"
+                    android:visibility="visible"/>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:id="@+id/schritt2"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:background="@color/colorPrimary"
+                        android:paddingLeft="5dp"
+                        android:text="@string/zutaten_fuer"
+                        android:textColor="#fff"
+                        android:visibility="visible"
+                        android:gravity="center_vertical"
+                        android:textSize="@dimen/text_medium"/>
+
+                    <EditText
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:ems="10"
+                        android:id="@+id/ueberschriftzutaten2"
+                        android:layout_weight="1"
+                        android:background="@color/colorPrimary"
+                        android:paddingLeft="10dp"
+                        android:textColor="#fff"
+                        android:textSize="@dimen/text_medium"
+                        android:maxLength="30"
+                        android:hint="Bezeichnung Schritt 2"
+                        android:inputType="text" />
+
+                    <ImageButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:srcCompat="@android:drawable/ic_input_add"
+                        android:id="@+id/add_2"
+                        android:layout_weight="0"
+                        android:background="@color/colorPrimary"
+                        android:layout_gravity="right|end" />
+
+                </LinearLayout>
+
+
+                <ListView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/zutaten2"
+                    android:layout_weight="0"
+                    android:visibility="visible"/>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:id="@+id/schritt3"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:background="@color/colorPrimary"
+                        android:paddingLeft="5dp"
+                        android:text="@string/zutaten_fuer"
+                        android:textColor="#fff"
+                        android:visibility="visible"
+                        android:gravity="center_vertical"
+                        android:textSize="@dimen/text_medium"/>
+
+                    <EditText
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:ems="10"
+                        android:id="@+id/ueberschriftzutaten3"
+                        android:layout_weight="1"
+                        android:background="@color/colorPrimary"
+                        android:paddingLeft="10dp"
+                        android:textColor="#fff"
+                        android:textSize="@dimen/text_medium"
+                        android:maxLength="30"
+                        android:hint="Bezeichnung Schritt 3"
+                        android:inputType="text" />
+
+                    <ImageButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:srcCompat="@android:drawable/ic_input_add"
+                        android:id="@+id/add_3"
+                        android:layout_weight="0"
+                        android:background="@color/colorPrimary"/>
+
+                </LinearLayout>
+
+
+                <ListView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/zutaten3"
+                    android:layout_weight="0"
+                    android:visibility="visible"/>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:id="@+id/schritt4"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:background="@color/colorPrimary"
+                        android:paddingLeft="5dp"
+                        android:text="@string/zutaten_fuer"
+                        android:textColor="#fff"
+                        android:visibility="visible"
+                        android:gravity="center_vertical"
+                        android:textSize="@dimen/text_medium"/>
+
+                    <EditText
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:ems="10"
+                        android:id="@+id/ueberschriftzutaten4"
+                        android:layout_weight="1"
+                        android:background="@color/colorPrimary"
+                        android:paddingLeft="10dp"
+                        android:textColor="#fff"
+                        android:textSize="@dimen/text_medium"
+                        android:maxLength="30"
+                        android:hint="Bezeichnung Schritt 4"
+                        android:inputType="text" />
+
+                    <ImageButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:srcCompat="@android:drawable/ic_input_add"
+                        android:id="@+id/add_4"
+                        android:layout_weight="0"
+                        android:background="@color/colorPrimary"/>
+
+                </LinearLayout>
+
+
+                <ListView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/zutaten4"
+                    android:layout_weight="0"
+                    android:visibility="visible"/>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:id="@+id/schritt5"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:background="@color/colorPrimary"
+                        android:paddingLeft="5dp"
+                        android:text="@string/zutaten_fuer"
+                        android:textColor="#fff"
+                        android:visibility="visible"
+                        android:gravity="center_vertical"
+                        android:textSize="@dimen/text_medium"/>
+
+                    <EditText
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:ems="10"
+                        android:id="@+id/ueberschriftzutaten5"
+                        android:layout_weight="1"
+                        android:background="@color/colorPrimary"
+                        android:paddingLeft="10dp"
+                        android:textColor="#fff"
+                        android:textSize="@dimen/text_medium"
+                        android:maxLength="30"
+                        android:hint="Bezeichnung Schritt 5"
+                        android:inputType="text" />
+
+                    <ImageButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:srcCompat="@android:drawable/ic_input_add"
+                        android:id="@+id/add_5"
+                        android:layout_weight="0"
+                        android:background="@color/colorPrimary"/>
+
+                </LinearLayout>
+
+
+                <ListView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/zutaten5"
+                    android:layout_weight="0"
+                    android:visibility="visible"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorPrimary"
+                    android:paddingLeft="5dp"
+                    android:text="@string/zubereitung"
+                    android:textColor="#fff"
+                    android:visibility="visible"
+                    android:layout_weight="0"
+                    android:textSize="@dimen/text_medium"
+                    />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/zubereitung"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:textSize="@dimen/text_medium"
+                    android:layout_weight="0"
+                    android:allowUndo="true"
+                    android:inputType="textAutoCorrect|textMultiLine"
+                    android:hint="Zubereitung beschreiben" />
+
+            </LinearLayout>
+
+        </ScrollView>
+
+
+    </LinearLayout>
+
+
+</android.support.design.widget.CoordinatorLayout>

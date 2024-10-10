@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item android:title="@string/m_nur_nicht_gespeichert"
+        android:id="@+id/action_only_not_saved"
+        android:icon="@drawable/ic_svg_rezept_exists_not"
+        app:showAsAction="always"
+        android:visible="true" />
+
+    <item android:title="@string/m_nur_neu"
+        android:id="@+id/action_only_new"
+        app:showAsAction="always"
+        android:visible="true"
+        android:icon="@drawable/ic_svg_rezept_neu_not"
+        android:checkable="true" />
+
+    <item android:title="@string/m_refresh"
+        android:id="@+id/action_refresh"
+        app:showAsAction="always"
+        android:visible="true"
+        android:icon="@drawable/ic_svg_cloud_refresh" />
+</menu>

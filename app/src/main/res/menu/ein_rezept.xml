@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:title="@string/m_rezept_loeschen"
+        android:visible="true"
+        android:id="@+id/action_delete"
+        app:showAsAction="always"
+        android:icon="@android:drawable/ic_menu_delete" />
+
+    <item android:title="@string/m_rezept_upload"
+        android:id="@+id/action_upload"
+        android:icon="@drawable/ic_svg_cloud_upload"
+        app:showAsAction="never"
+        android:visible="true" />
+    <item android:title="@string/m_rezept_export"
+        android:id="@+id/action_export"
+        android:icon="@drawable/ic_svg_rezept_export"
+        android:visible="true"
+        app:showAsAction="never" />
+
+    <item android:title="@string/m_rezept_senden"
+        android:id="@+id/action_share"
+        android:icon="@android:drawable/ic_menu_share"
+        android:visible="true"
+        app:showAsAction="never" />
+
+    <item android:title="@string/m_rezept_umrechnen"
+        android:icon="@android:drawable/ic_menu_myplaces"
+        android:id="@+id/action_personen"
+        app:showAsAction="always"
+        android:visible="true" />
+
+    <item android:title="@string/m_rezept_aendern"
+        app:showAsAction="always"
+        android:icon="@android:drawable/ic_menu_edit"
+        android:id="@+id/action_edit"
+        android:visible="true" />
+</menu>

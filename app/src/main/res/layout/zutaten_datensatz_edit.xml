@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:clickable="false"
+    android:layout_height="40dp">
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/cb_ok"
+        android:layout_weight="0"
+        android:gravity="center|start"
+        android:layout_gravity="center_vertical"
+        android:visibility="gone"
+        android:focusable="false" />
+
+    <EditText
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/menge"
+        android:layout_weight="0.3"
+        android:gravity="right|center_vertical"
+        android:textSize="@dimen/text_small"
+        android:paddingRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_gravity="center_vertical"
+        android:hint="Menge"
+        android:inputType="numberDecimal" />
+
+    <de.steffen.rezepte.MyAutoCompleteTextView
+        android:text=""
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/einheit"
+        android:layout_weight="0.3"
+        android:textSize="@dimen/text_small"
+        android:gravity="left|center_vertical"
+        android:layout_gravity="center_vertical"
+        android:hint="Einheit"
+        android:theme="@style/Autocomplete" />
+
+    <de.steffen.rezepte.MyAutoCompleteTextView
+        android:text=""
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/zutat"
+        android:layout_weight="1"
+        android:textSize="@dimen/text_small"
+        android:gravity="left|center_vertical"
+        android:layout_gravity="center_vertical"
+        android:hint="Zutat eingeben"
+        android:theme="@style/Autocomplete" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@android:drawable/ic_delete"
+        android:id="@+id/btn_delete"
+        android:layout_weight="0"
+        android:layout_gravity="center"
+        android:focusable="false"
+        android:background="@color/colorPrimaryLight"
+        android:visibility="visible" />
+
+</LinearLayout>

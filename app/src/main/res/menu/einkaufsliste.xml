@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:title="@string/m_ekl_loeschen"
+        android:icon="@android:drawable/ic_menu_delete"
+        android:id="@+id/action_delete"
+        app:showAsAction="always"
+        android:visible="true" />
+
+    <item android:title="@string/m_ekl_senden"
+        android:id="@+id/action_share"
+        android:icon="@android:drawable/ic_menu_share"
+        app:showAsAction="always"
+        android:visible="true" />
+
+    <item android:title="@string/m_ekl_bearbeiten"
+        app:showAsAction="always"
+        android:icon="@android:drawable/ic_menu_edit"
+        android:id="@+id/action_edit"
+        android:visible="true" />
+
+    <item android:title="@string/m_ekl_neu"
+        android:id="@+id/action_add"
+        android:visible="true"
+        app:showAsAction="always"
+        android:icon="@drawable/ic_svg_einkaufstasche_add" />
+</menu>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item android:title="@string/m_filter"
+        android:id="@+id/action_filter"
+        android:icon="@drawable/ic_svg_filter"
+        android:visible="true"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/action_import"
+        android:icon="@drawable/ic_svg_rezept_import"
+        app:showAsAction="always"
+        android:title="@string/m_rezept_import"
+        android:visible="true" />
+    <item android:title="@string/rezepte_von_server"
+        android:id="@+id/action_download"
+        android:icon="@drawable/ic_svg_cloud_download"
+        app:showAsAction="ifRoom"
+        android:visible="true" />
+    <item android:title="@string/m_neu"
+        android:id="@+id/action_add"
+        android:visible="true"
+        app:showAsAction="always"
+        android:icon="@drawable/ic_svg_rezept_add" />
+</menu>

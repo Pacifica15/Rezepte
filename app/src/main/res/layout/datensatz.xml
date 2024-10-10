@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+    android:scrollbarSize="20dp">
+
+    <ImageView
+        android:paddingLeft="10dp"
+        android:id="@+id/RezeptBild"
+        android:maxHeight="100dp"
+        android:minHeight="100dp"
+        android:maxWidth="100dp"
+        android:minWidth="100dp"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@mipmap/_unbekannt"
+        android:adjustViewBounds="true">
+    </ImageView>
+
+    <TextView
+        android:paddingLeft="10dp"
+        android:id="@+id/RezeptName"
+        android:layout_width="match_parent"
+        android:textSize="20sp"
+        android:gravity="center_vertical"
+        android:maxHeight="100dp"
+        android:minHeight="100dp"
+        android:layout_height="100dp">
+
+    </TextView>
+
+
+</LinearLayout>

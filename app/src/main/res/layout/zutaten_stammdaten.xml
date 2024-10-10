@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="36dp"
+    android:descendantFocusability="blocksDescendants">
+
+    <!--
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/cb_ok"
+        android:layout_weight="0"
+        android:gravity="center|start"
+        android:layout_gravity="center_vertical"
+        android:visibility="gone"
+        android:focusable="false"
+        android:focusableInTouchMode="false" /> -->
+
+    <TextView
+        android:text="TextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/bezeichnung"
+        android:layout_weight="0.8"
+        android:layout_marginLeft="10dp"
+        android:paddingRight="10dp"
+        android:textSize="@dimen/text_small"
+        android:gravity="center_vertical"
+        android:layout_gravity="center_vertical"
+        android:maxLines="2" />
+
+    <TextView
+        android:text="TextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/einheit"
+        android:layout_weight="0.3"
+        android:textSize="@dimen/text_small"
+        android:gravity="left"
+        android:layout_gravity="center_vertical"
+        android:maxLines="1" />
+
+    <TextView
+        android:text="TextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/shop"
+        android:layout_weight="0.4"
+        android:textSize="@dimen/text_small"
+        android:layout_gravity="center_vertical"
+        android:gravity="left"
+        android:maxLines="1" />
+
+    <TextView
+        android:text="TextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/preis"
+        android:layout_weight="0.3"
+        android:numeric="decimal"
+        android:textSize="@dimen/text_small"
+        android:gravity="right"
+        android:layout_gravity="center_vertical"
+        android:maxLines="1"
+        android:layout_marginRight="10dp" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@android:drawable/ic_delete"
+        android:id="@+id/btn_delete"
+        android:layout_weight="0"
+        android:layout_gravity="center"
+        android:visibility="visible"
+        android:focusable="false"
+        android:focusableInTouchMode="false" />
+</LinearLayout>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item android:title="@string/m_schritt_neu"
+        android:id="@+id/action_add_schritt" />
+    <item android:title="@string/m_schritt_loeschen"
+        android:id="@+id/action_remove_schritt" />
+    <item android:title="@string/m_rezept_speichern"
+        app:showAsAction="always"
+        android:icon="@android:drawable/ic_menu_save"
+        android:id="@+id/action_save"
+        android:visible="true" />
+    <item android:title="@string/m_rezept_abbrechen"
+        android:icon="@android:drawable/ic_menu_close_clear_cancel"
+        android:id="@+id/action_cancel"
+        app:showAsAction="always"
+        android:visible="true" />
+    <item android:title="@string/m_neue_zutat"
+        android:id="@+id/action_add_zutat"
+        app:showAsAction="always"
+        android:icon="@drawable/ic_svg_zutaten_add_menu" />
+
+</menu>

@@ -1,0 +1,13 @@
+INSERT INTO `kategorien` VALUES (1,'Vorspeisen');
+INSERT INTO `kategorien` VALUES (2,'Soßen, Aufstriche');
+INSERT INTO `kategorien` VALUES (3,'Brot');
+INSERT INTO `kategorien` VALUES (4,'Suppen');
+INSERT INTO `kategorien` VALUES (5,'Hauptgerichte');
+INSERT INTO `kategorien` VALUES (6,'Beilagen');
+INSERT INTO `kategorien` VALUES (7,'Süßspeisen');
+INSERT INTO `kategorien` VALUES (8,'Salate');
+INSERT INTO `kategorien` VALUES (9,'Nachspeisen');
+INSERT INTO `kategorien` VALUES (10,'Kuchen');
+INSERT INTO `kategorien` VALUES (11,'Kleingebäck');
+INSERT INTO `kategorien` VALUES (12,'Weihnachtsgebäck');
+INSERT INTO `kategorien` VALUES (13,'Getränke');
